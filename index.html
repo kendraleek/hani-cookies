@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hani’s Aged Brown Butter Chocolate Chip Cookies — Test Batch #1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #fffaf5;
+      --card: #ffffff;
+      --ink: #3a3029;
+      --muted: #6f6156;
+      --primary: #7b4b2a; /* cocoa */
+      --accent: #ffb7c5; /* pastel pink */
+      --accent-2: #f4d9ae; /* butterscotch */
+      --accent-3: #c7e9e4; /* mint */
+      --ring: #f3c8a5;
+      --shadow: 0 10px 30px rgba(122, 78, 41, .12);
+      --radius: 18px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg, var(--bg), #fff);
+      color:var(--ink); font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height:1.6; letter-spacing:.1px;
+    }
+    .wrap{max-width:920px; margin:32px auto; padding:24px;}
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding: clamp(20px, 4vw, 48px);
+      position:relative;
+      overflow:hidden;
+      border:2px dashed #f0e2d6;
+    }
+
+    header{
+      display:grid; gap:10px; justify-items:center; text-align:center; margin-bottom:8px;
+    }
+    .kicker{font-size:.95rem; color:var(--muted);}
+    h1{
+      margin:.1rem 0 .3rem; font-family:Fraunces, Poppins, serif; font-weight:900; line-height:1.15;
+      font-size: clamp(1.6rem, 1.2rem + 2.8vw, 3rem);
+      color:var(--primary);
+      text-shadow:0 1px 0 #fff;
+    }
+    h2{font-size: clamp(1.05rem, .9rem + .8vw, 1.4rem); color:var(--ink); margin:.2rem 0 0; font-weight:600}
+
+    .badges{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:14px 0 6px}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; font-size:.92rem; border:1px solid var(--ring); background: #fff7ef}
+    .badge.pink{background:#fff1f4; border-color:#ffd4df}
+    .badge.mint{background:#f3fbfa; border-color:#cfeee8}
+
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px; margin-top:26px}
+    .section{grid-column:1/-1; background:#fff; border-radius:14px; padding:18px 18px 16px; border:1px solid #f2e7db}
+    .section h3{margin:0 0 10px; font-size:1.05rem; display:flex; align-items:center; gap:10px}
+    .section h3 .icon{font-size:1.2rem}
+
+    .two{grid-column:span 6}
+    @media (max-width: 800px){ .two{grid-column:1/-1} }
+
+    .list{margin:.2rem 0 0 0; padding-left:1.2rem}
+    .list li{margin:.25rem 0}
+
+    .ingr{display:flex; flex-wrap:wrap; gap:8px}
+    .chip{padding:6px 10px; border-radius:999px; background:linear-gradient(#fff,#fff) padding-box,
+        conic-gradient(from .25turn, var(--accent), var(--accent-2), var(--accent-3), var(--accent)) border-box;
+      border:2px solid transparent; font-size:.9rem}
+
+    .note{background:#fff8ef; border-left:6px solid var(--accent-2); padding:12px 14px; border-radius:10px;}
+
+    .link-box{
+      background:#fdf5ff; border:1px dashed #f4cde0; padding:18px; border-radius:14px;
+      text-align:center;
+    }
+    .link-box a{
+      display:inline-block; margin-top:10px; padding:10px 16px; background:var(--primary); color:#fff;
+      border-radius:999px; text-decoration:none; font-weight:600;
+      box-shadow:0 6px 18px rgba(123,75,42,.22);
+      transition: background .2s;
+    }
+    .link-box a:hover{background:#633922}
+
+    .footer{
+      margin-top:18px; text-align:center; font-size:.95rem; color:var(--muted)
+    }
+
+    .actions{position:sticky; top:8px; display:flex; gap:8px; justify-content:flex-end; margin-bottom:10px}
+    button{
+      appearance:none; border:0; background:var(--primary); color:#fff; padding:10px 14px; border-radius:999px; cursor:pointer;
+      box-shadow:0 6px 18px rgba(123,75,42,.22); font-weight:600
+    }
+    button.secondary{background:#fff; color:var(--primary); border:1px solid var(--ring)}
+
+    @media print{
+      body{background:#fff}
+      .wrap{margin:0; padding:0}
+      .actions{display:none}
+      .card{border:0; box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="actions">
+      <button onclick="window.print()" aria-label="Print this sheet">🖨️ Print</button>
+    </div>
+
+    <article class="card" role="article" aria-label="Hani’s cookie notes">
+      <header>
+        <div class="kicker">Test Batch #1</div>
+        <h1>Hani’s Aged Brown Butter <br> 🍪 Chocolate Chip Cookies 🍪</h1>
+        <h2>Journey to Making a Software Engineer’s Favorite Cookie</h2>
+        <p>tl;dr fill out the cookie survey link at the bottom of the page :)</p>
+        <div class="badges" aria-label="author and team">
+          <!-- <span class="badge"><span aria-hidden="true"></span> Hi! I’m <strong>Kendra Lee</strong> (alias <strong>@kleeo</strong>)</span> -->
+          <span class="badge"><span aria-hidden="true"></span> Hi! I’m <strong>Hani</strong></span>
+
+        </div>
+        <div class="badges" aria-label="author and team">
+          <!-- <span class="badge pink">Nickname: <strong>Hani</strong> <em>(hah‑nee)</em></span> -->
+          <span class="badge mint">Amazon</span>
+          <span class="badge mint">SDE I</span>
+        </div>
+        <p class="kicker">Also known as the dog mom of <strong>daVinci</strong> (golden retriever) — say hi if you see him!</p>
+      </header>
+
+      <section class="grid" aria-label="details">
+        <div class="section two">
+          <h3><span class="icon">🤔</span> Why did I bring cookies?</h3>
+          <ol class="list">
+            <li>I left my laptop open (did not lock it) → I owe donuts → but I decided on homemade <strong>cookies</strong> (sorry if you expected donuts) 🫣</li>
+            <li>I love to bake and I’m developing the best cookie recipe — but since my taste‑test audience is software engineers in Alexa News, I guess I’m aiming more for a <em>software engineer’s favorite cookie</em> ¯\_(ツ)_/¯</li>
+          </ol>
+        </div>
+
+        <div class="section two">
+          <h3><span class="icon">⚠️</span> Allergy note — main ingredients</h3>
+          <div class="ingr" role="list">
+            <span class="chip" role="listitem">flour</span>
+            <span class="chip" role="listitem">butter</span>
+            <span class="chip" role="listitem">milk</span>
+            <span class="chip" role="listitem">salt</span>
+            <span class="chip" role="listitem">sugar</span>
+            <span class="chip" role="listitem">chocolate</span>
+          </div>
+        </div>
+
+        <div class="section" style="grid-column:1/-1">
+          <h3><span class="icon">🧑‍🍳</span> What is aged cookie dough?</h3>
+          <ul class="list">
+            <li>It’s the process of resting cookie dough in the refrigerator for a period of time (<strong>48 hours</strong> in my case).</li>
+            <li>This lets ingredients incorporate and the flour fully hydrate (absorb the wet ingredients) which improves moisture and sugar distribution.</li>
+            <li>This improves texture and flavor, giving:
+              <ul class="list">
+                <li>hints of butterscotch/toffee notes</li>
+                <li>a chewier texture when baked (associated with the cute wrinkly surface)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section" style="grid-column:1/-1">
+          <h3><span class="icon">📋</span> Feedback time</h3>
+          <div class="link-box">
+            <p><strong>If you took a cookie</strong>, please click the button below and fill out the survey.</p>
+            <p class="note">I created this survey to better deliver results — practicing <strong>customer obsession</strong> 🤝 (nod emoji).</p>
+            <p>Be honest — I can take constructive criticism, so please <strong>disagree and commit</strong>!</p>
+            <a href="#" target="_blank" rel="noopener">🍪 Fill Out the Cookie Survey</a>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer">But… will there be a <strong>Test Batch #2</strong>? I’m not too sure… but one can only hope I leave my laptop open again with @qazziz lurking around :) 🍪</p>
+    </article>
+  </div>
+</body>
+</html>
